@@ -1,0 +1,66 @@
+
+
+SAI MANISH S
+Microsoft Certified Data Engineer
+Microsoft Certified Data Engineer with 4 years of experience in ETL development, data platform modernization, and workflow automation. Skilled in Azure, Databricks, Microsoft Fabric, Spark, and SQL, with a proven track record of optimizing performance and delivering scalable solutions for clients like BAT and the Income Tax Department of India. Seeking a Data Engineer role to drive efficiency and enable data-driven decision-making.
+[March 29, 2024] – Present
+Key Projects
+Global Leaf Processing – Supply Analytics (Azure Databricks, Microsoft Fabric, ETL, Lakehouse, Spark)
+Designed, developed, and implemented the entire ETL pipeline for the Supply vertical using Microsoft Fabric Data Factory and Notebooks.
+Collaborated directly with clients to gather reporting requirements, perform Source-to-Target mapping, and define KPIs for Power BI dashboards.
+Modeled the Gold layer to support analytics on tobacco leaf movements, optimizing data for supply chain visibility and real-time reporting. Used Dimension modelling to model DIM tables and FACT tables
+Snowflake to Microsoft Fabric Migration (Data Migration, Spark, Job Orchestration)
+Led the full migration of all data warehousing and analytics pipelines from Snowflake to Microsoft Fabric, including ETL jobs 900+ SQL  tables/views, and reporting dataflows.
+Converted Snowflake SQL code to Fabric-compatible Spark code; streamlined job orchestration using Fabric pipelines.
+Hands-on with Azure Data Factory (ADF) and Databricks, for building and managing data pipelines alongside Fabric
+Achieved seamless system transition with improved performance, reduced downtime, and optimized pipeline execution.
+Data Science ETL Migration (Microsoft Fabric, Azure Databricks, PySpark, Delta Lake, Azure Blob Storage, REST APIs) 
+Migrated 10+ live ETL pipelines independently, replicating orchestration, scheduling, and dependencies from Databricks into Microsoft Fabric.
+Engineered data ingestion frameworks to integrate Azure Blob Storage and REST APIs, merging diverse datasets into PySpark DataFrames for downstream ML workflows
+Reverse-engineered custom Databricks libraries and rebuilt a bespoke runtime environment within Microsoft Fabric to support legacy dependencies.
+Achieved zero-downtime migration for live machine learning pipelines, ensuring uninterrupted model training.
+Improved pipeline execution efficiency by leveraging Fabric-native Spark optimizations, reducing job runtimes by ~30%.
+Associate Consultant at ITC Infotech | D&A Team
+Senior Systems Engineer at Infosys Ltd | Income Tax
+LINKEDIN PROFILE
+[[October 4, 2021] – [March 27, 2024]
+Key Projects..
+Income Tax of India (Spring, Java)
+Developed and maintained components for processing Income Tax Returns (ITRs), ensuring accurate handling of taxpayer data.
+Created and deployed a real-time monitoring dashboard in Dynatrace to track and enhance API performance, ensuring smooth operation of taxpayer communication systems.
+Managed the processing of approximately 7 crore emails and SMS notifications, ensuring timely and accurate delivery to taxpayers.
+Led an initiative to increase SONAR code coverage from 60% to 80%, improving overall code quality, maintainability, and test reliability.
+
+
+PROJECTS
+Python Games :  
+PONG: Created a classic Pong game with real-time user interaction and score tracking.
+Quiz Game: Designed a quiz game with multiple-choice questions, incorporating scoring and time limits.
+Doc Bot :
+.Built an AI-powered Q&A bot using Retrieval-Augmented Generation (RAG) to answer queries on uploaded documents.
+Implemented vector embeddings and semantic search with ChromaDB for efficient document retrieval.
+Developed an interactive Streamlit UI for file upload, query input, and response visualization.
+Integrated with LLMs to provide accurate, context-aware responses from document knowledge bases.
+Delivered a scalable solution for document intelligence, enterprise search, and knowledge management use cases.
+Certifications
+Microsoft Certified: Fabric Analytics Engineer Associate
+Gen AI for everyone (Coursera)
+Implement Real time Intelligence in Microsoft Fabric
+Python for DataScine and AI  (Coursera)
+Education
+Bachelor's Degree in Electronics and Communication, May 2021
+GPA - 8.8 / 10
+Amrita Vishwavidhyapeetam, Banagalore
+SKILLS
+Big Data & Warehousing:
+Microsoft Fabric (Data Factory, Notebooks, Lakehouse, Pipelines), Snowflake, Azure Databricks, Azure Data Factory (ADF), Apache Spark (SQL & PySpark), Delta Lake, Parquet
+ETL & Data Integration:
+ETL pipeline design & optimization, data modeling (star schema, fact/dimension tables, semantic models), source-to-target mapping, SQL performance tuning, batch & real-time data processing, job orchestration, data migration (Snowflake → Fabric, Databricks → Fabric), data ingestion (Azure Blob Storage, REST APIs, Kafka)
+Programming & Frameworks:
+Python (Pandas, PySpark, API development), Java, TypeScript, T-SQL, SQL, FastAPI, REST APIs, Streamlit, RAG (Retrieval-Augmented Generation), Docker
+Cloud Platforms & DevOps:
+Microsoft Azure (App Services, Data Lake Storage Gen1/Gen2, Blob Storage), Docker containerization, CI/CD pipelines (Azure DevOps, GitLab), automated deployments, version control (Git), Dynatrace (Monitoring & Observability)
+Machine Learning & AI Enablement:
+Data preparation for ML pipelines, feature engineering with PySpark, live training data pipelines, RAG-based AI applications, ChromaDB (vector embedding & storage)
+Additional Competencies
+ Client requirement gathering, workflow automation, system performance optimization, data governance, data lineage, real-time reporting
