@@ -44,11 +44,11 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 relative overflow-hidden">
+    <section id="contact" className="min-h-screen bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 relative overflow-hidden flex items-center justify-center py-10">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(66,153,225,0.1),transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(245,101,101,0.1),transparent_50%)]" />
       
-      <div className="relative max-w-7xl mx-auto px-6 md:px-8">
+      <div className="max-w-4xl w-full mx-auto px-6 md:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold font-poppins bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent mb-4" data-testid="text-contact-heading">
             Let's Work Together
@@ -58,8 +58,8 @@ export default function ContactSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <Card className="border-2 hover:border-primary/50 transition-all duration-300" data-testid="card-contact-form">
+        <div className="flex flex-col items-center gap-8 w-full">
+          {/* <Card className="border-2 hover:border-primary/50 transition-all duration-300" data-testid="card-contact-form">
             <CardHeader>
               <CardTitle className="text-2xl font-poppins flex items-center gap-2">
                 <Send className="w-6 h-6 text-primary" />
@@ -115,22 +115,22 @@ export default function ContactSection() {
                 </Button>
               </form>
             </CardContent>
-          </Card>
+          </Card> */}
           
           <div className="space-y-6">
-            <Card className="border-2 hover:border-primary/50 transition-all duration-300" data-testid="card-contact-info">
+            <Card className="border-2 hover:border-primary/50 transition-all duration-300 w-full" data-testid="card-contact-info">
               <CardHeader>
-                <CardTitle className="text-2xl font-poppins">Connect With Me</CardTitle>
+                <CardTitle className="text-3xl font-poppins text-center">Connect With Me</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 <Button
                   variant="outline"
                   className="w-full justify-start gap-3 hover:bg-primary/10 hover:border-primary transition-all duration-300"
-                  onClick={() => window.open("mailto:saimanish@example.com")}
+                  onClick={() => window.open("mailto:saimanishs99@gmail.com")}
                   data-testid="button-contact-email"
                 >
                   <Mail className="w-5 h-5 text-primary" />
-                  <span>saimanish@example.com</span>
+                  <span>saimanishs99@gmail.com</span>
                 </Button>
                 
                 <Button
@@ -155,14 +155,14 @@ export default function ContactSection() {
               </CardContent>
             </Card>
             
-            <Card className="bg-gradient-to-br from-primary via-secondary to-accent text-white border-0 shadow-2xl overflow-hidden" data-testid="card-download-resume">
+            <Card className="bg-gradient-to-br from-primary via-secondary to-accent text-white border-0 shadow-2xl overflow-hidden w-full" data-testid="card-download-resume">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_70%)]" />
               <CardContent className="p-8 relative">
                 <div className="text-center space-y-4">
                   <div className="inline-block p-4 bg-white/20 backdrop-blur-sm rounded-2xl">
                     <Download className="w-10 h-10" />
                   </div>
-                  <h3 className="font-bold text-2xl font-poppins">Download My Resume</h3>
+                  <h3 className="font-bold text-3xl font-poppins text-center">Download My Resume</h3>
                   <p className="text-white/90 text-sm">
                     Get a comprehensive overview of my experience, skills, and achievements in a professionally formatted PDF
                   </p>

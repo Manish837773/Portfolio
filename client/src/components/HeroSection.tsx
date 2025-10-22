@@ -1,6 +1,6 @@
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import headshotImage from "@assets/generated_images/Professional_headshot_portrait_data_engineer_13a8b9e6.png";
+import headshotImage from "@assets/generated_images/Photo.jpg";
 
 export default function HeroSection() {
   const scrollToSection = (sectionId: string) => {
@@ -9,7 +9,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-secondary to-accent">
+    <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-secondary to-accent">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(0,0,0,0.2),transparent_60%)]" />
       
@@ -21,7 +21,7 @@ export default function HeroSection() {
               <img
                 src={headshotImage}
                 alt="Sai Manish S"
-                className="relative w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-white shadow-2xl"
+                className="relative w-70 h-70 md:w-96 md:h-96 rounded-full object-cover border-4 border-white shadow-2xl"
                 data-testid="img-hero-headshot"
               />
             </div>
