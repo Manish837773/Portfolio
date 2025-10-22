@@ -71,7 +71,7 @@ export default function HeroSection() {
                 size="icon" 
                 variant="ghost"
                 className="text-white hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-110"
-                onClick={() => window.open("https://www.linkedin.com/", "_blank")}
+                onClick={() => window.open("https://www.linkedin.com/in/sai-manish-s/", "_blank")}
                 data-testid="button-linkedin"
               >
                 <Linkedin className="w-5 h-5" />

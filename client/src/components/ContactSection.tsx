@@ -126,7 +126,7 @@ export default function ContactSection() {
                 <Button
                   variant="outline"
                   className="w-full justify-start gap-3 hover:bg-primary/10 hover:border-primary transition-all duration-300"
-                  onClick={() => window.open("https://www.linkedin.com/", "_blank")}
+                  onClick={() => window.open("https://www.linkedin.com/in/sai-manish-s/", "_blank")}
                   data-testid="button-contact-linkedin"
                 >
                   <Linkedin className="w-5 h-5 text-primary" />
