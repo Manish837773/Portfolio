@@ -25,12 +25,22 @@ export default function ContactSection() {
     setFormData({ name: "", email: "", message: "" });
   };
 
-  const handleDownloadResume = () => {
-    console.log("Download resume clicked");
-    toast({
-      title: "Resume Download",
-      description: "Resume download initiated.",
-    });
+  const handleDownloadResume = async () => {
+    try {
+      const { generateResume } = await import("@/lib/generateResume");
+      generateResume();
+      toast({
+        title: "Resume Downloaded",
+        description: "Your resume has been downloaded successfully.",
+      });
+    } catch (error) {
+      console.error("Error downloading resume:", error);
+      toast({
+        title: "Download Error",
+        description: "There was an error downloading the resume. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
