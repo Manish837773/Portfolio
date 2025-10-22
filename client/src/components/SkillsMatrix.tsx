@@ -6,12 +6,14 @@ interface SkillCategory {
   title: string;
   icon: React.ReactNode;
   skills: string[];
+  gradient: string;
 }
 
 const skillCategories: SkillCategory[] = [
   {
     title: "Big Data & Warehousing",
     icon: <Database className="w-6 h-6" />,
+    gradient: "from-blue-500 to-cyan-500",
     skills: [
       "Microsoft Fabric",
       "Snowflake",
@@ -26,6 +28,7 @@ const skillCategories: SkillCategory[] = [
   {
     title: "ETL & Data Integration",
     icon: <Cog className="w-6 h-6" />,
+    gradient: "from-purple-500 to-pink-500",
     skills: [
       "ETL Pipeline Design",
       "Data Modeling",
@@ -40,6 +43,7 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Programming & Frameworks",
     icon: <Code className="w-6 h-6" />,
+    gradient: "from-orange-500 to-red-500",
     skills: [
       "Python",
       "Pandas",
@@ -55,6 +59,7 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Cloud Platforms & DevOps",
     icon: <Cloud className="w-6 h-6" />,
+    gradient: "from-teal-500 to-green-500",
     skills: [
       "Microsoft Azure",
       "Azure Blob Storage",
@@ -69,6 +74,7 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Machine Learning & AI",
     icon: <Brain className="w-6 h-6" />,
+    gradient: "from-indigo-500 to-purple-500",
     skills: [
       "Data Preparation for ML",
       "Feature Engineering",
@@ -82,22 +88,28 @@ const skillCategories: SkillCategory[] = [
 
 export default function SkillsMatrix() {
   return (
-    <section id="skills" className="py-20 bg-background">
+    <section id="skills" className="py-20 bg-gradient-to-br from-background via-muted/30 to-background">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold font-poppins text-foreground mb-12 text-center" data-testid="text-skills-heading">
-          Skills & Expertise
-        </h2>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold font-poppins bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent mb-4" data-testid="text-skills-heading">
+            Skills & Expertise
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            A comprehensive toolkit for modern data engineering challenges
+          </p>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
             <Card 
               key={index} 
-              className="hover-elevate transition-all duration-300"
+              className="hover-elevate transition-all duration-300 group overflow-hidden border-2 hover:border-primary/50"
               data-testid={`card-skill-category-${index}`}
             >
+              <div className={`h-1 bg-gradient-to-r ${category.gradient}`} />
               <CardHeader className="gap-2">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                  <div className={`p-3 bg-gradient-to-br ${category.gradient} rounded-xl text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                     {category.icon}
                   </div>
                   <CardTitle className="text-xl font-poppins" data-testid={`text-skill-category-${index}`}>

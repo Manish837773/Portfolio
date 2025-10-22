@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import TechBadge from "./TechBadge";
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface Project {
@@ -94,14 +94,27 @@ export default function ExperienceTimeline() {
   };
 
   return (
-    <section id="experience" className="py-20 bg-card">
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold font-poppins text-foreground mb-12 text-center" data-testid="text-experience-heading">
-          Work Experience
-        </h2>
+    <section id="experience" className="py-20 bg-gradient-to-br from-card via-background to-card relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(245,101,101,0.05),transparent_50%)]" />
+      
+      <div className="relative max-w-7xl mx-auto px-6 md:px-8">
+        <div className="text-center mb-12">
+          <div className="inline-block mb-4">
+            <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
+              <Briefcase className="w-4 h-4 text-primary" />
+              <span className="text-sm font-semibold text-primary">Career Journey</span>
+            </div>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold font-poppins bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent mb-4" data-testid="text-experience-heading">
+            Work Experience
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Building enterprise-scale data solutions across leading organizations
+          </p>
+        </div>
         
         <div className="relative">
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary" data-testid="line-timeline" />
+          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-secondary to-accent rounded-full" data-testid="line-timeline" />
           
           <div className="space-y-12">
             {experiences.map((exp, expIndex) => (
@@ -110,14 +123,15 @@ export default function ExperienceTimeline() {
                 className={`relative flex flex-col ${expIndex % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-12`}
               >
                 <div className="flex-1">
-                  <Card className="hover-elevate" data-testid={`card-experience-${expIndex}`}>
+                  <Card className="hover-elevate border-2 hover:border-primary/50 transition-all duration-300 overflow-hidden" data-testid={`card-experience-${expIndex}`}>
+                    <div className={`h-1 bg-gradient-to-r ${expIndex === 0 ? 'from-primary to-secondary' : 'from-secondary to-accent'}`} />
                     <CardHeader className="gap-2">
                       <div className="flex flex-wrap items-center justify-between gap-2">
                         <CardTitle className="text-2xl font-poppins" data-testid={`text-company-${expIndex}`}>
                           {exp.company}
                         </CardTitle>
                         {exp.current && (
-                          <Badge variant="default" data-testid="badge-current">
+                          <Badge variant="default" className="bg-gradient-to-r from-primary to-secondary" data-testid="badge-current">
                             Current
                           </Badge>
                         )}
@@ -125,7 +139,7 @@ export default function ExperienceTimeline() {
                       <p className="text-lg font-semibold text-muted-foreground" data-testid={`text-role-${expIndex}`}>
                         {exp.role}
                       </p>
-                      <p className="text-sm text-muted-foreground" data-testid={`text-period-${expIndex}`}>
+                      <p className="text-sm text-muted-foreground font-medium" data-testid={`text-period-${expIndex}`}>
                         {exp.period}
                       </p>
                     </CardHeader>
@@ -136,7 +150,7 @@ export default function ExperienceTimeline() {
                         const isExpanded = expandedProjects[projectKey];
                         
                         return (
-                          <div key={projIndex} className="border-l-2 border-primary pl-4">
+                          <div key={projIndex} className="border-l-4 border-primary pl-4 hover:border-secondary transition-colors duration-300">
                             <div className="flex items-start justify-between gap-4 mb-2">
                               <h4 className="font-semibold text-lg" data-testid={`text-project-title-${projectKey}`}>
                                 {project.title}
@@ -145,7 +159,7 @@ export default function ExperienceTimeline() {
                                 size="icon"
                                 variant="ghost"
                                 onClick={() => toggleProject(projectKey)}
-                                className="flex-shrink-0 h-8 w-8"
+                                className="flex-shrink-0 h-8 w-8 hover:bg-primary/10"
                                 data-testid={`button-toggle-project-${projectKey}`}
                               >
                                 {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
@@ -180,7 +194,7 @@ export default function ExperienceTimeline() {
                   </Card>
                 </div>
                 
-                <div className="absolute left-0 md:left-1/2 top-6 w-4 h-4 -ml-[7px] md:-ml-[7px] bg-primary rounded-full border-4 border-background" data-testid={`dot-timeline-${expIndex}`} />
+                <div className="absolute left-0 md:left-1/2 top-6 w-5 h-5 -ml-[9px] md:-ml-[9px] bg-gradient-to-br from-primary to-secondary rounded-full border-4 border-background shadow-lg" data-testid={`dot-timeline-${expIndex}`} />
                 
                 <div className="flex-1 hidden md:block" />
               </div>
